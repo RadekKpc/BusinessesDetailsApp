@@ -4,7 +4,8 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
-import BussnesesDetails from './pages/BussnesesDetails';
+import BusinessDetails from './views/BusinessDetails/BusinessDetails';
+import HomePage from './views/HomePage/HomePage';
 
 const  App = () => {
   return (
@@ -12,7 +13,8 @@ const  App = () => {
       <section>
        <BrowserRouter>
           <Routes >
-          <Route path="/" element={<BussnesesDetails />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/businesses/:businessId" element={<BusinessDetails />} />
           </Routes >
         </BrowserRouter>
       </section>
