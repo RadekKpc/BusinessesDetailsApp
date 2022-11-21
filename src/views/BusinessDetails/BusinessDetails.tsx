@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import type { BusinessDetailsEntry } from './commonTypes';
 import { defaultBusinessDetailsEntry } from './commonTypes';
 import { getBusinessDetails } from '../../utils/businessService';
+import BusinessOpenStatus from './BusinessOpenStatus/BusinessOpenStatus';
 
 const  BusinessDetails = () => {
   const pathParams = useParams();
@@ -27,6 +28,7 @@ const  BusinessDetails = () => {
             </div>,
           )
         }
+        <BusinessOpenStatus days={businessDetails.openingHours.days} />
     </div>
   ); 
 };
